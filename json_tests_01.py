@@ -10,11 +10,12 @@ headers = {'content-type': 'application/json'}
 
 r = requests.post(url,
     data=json.dumps(payload),
-    headers=headers)
+    headers=headers,
+    timeout=1)
 
 gateData = json.loads(r.text)
 
-#print ('raw json dictionary received', gateData)
+print ('raw json dictionary received', gateData)
 
 
 if 'result' in gateData.keys():
