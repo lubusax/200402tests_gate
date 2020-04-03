@@ -2,7 +2,7 @@ import requests
 import json
 
 payload =  {"params" : {  "action" : "new thing" ,
-                "thing type" :  "HDC2"} }
+                "thing type" :  "HDC1080"} }
 
 url_basis  = 'http://192.168.0.31:8069/things/gates/incoming/'
 routeFrom  ='2020040310452647470136893a4969915c7da6bc658624'
