@@ -2,10 +2,12 @@ import requests
 import json
 
 payload =  {"params" : {  "action" : "new thing" ,
-                "thing type" :  "HDC1080"} }
+                "thing type" :  "HDC1080",
+                "thing identifier" : "C3P5"
+                } }
 
 url_basis  = 'http://192.168.0.31:8069/things/gates/incoming/'
-routeFrom  ='2020040310452647470136893a4969915c7da6bc658624'
+routeFrom  ='202004041155497068e4e26e59443fb1ceaec72971a8c0'
 
 url = url_basis + routeFrom
 
