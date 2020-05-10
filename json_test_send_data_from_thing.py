@@ -1,13 +1,17 @@
 import requests
 import json
 
-payload =  {"params" : {  "action" : "new thing" ,
-                "thing type" :  "HDC1080",
-                "thing identifier" : "C3P10"
+payload =  {"params" : {  "action" : "new data" ,
+                "temperature celsius" :  "25.75",
+                "relative humidity" : "28.4",
+                "battery level" : "3.232"
                 } }
+server =
+port =
 
-url_basis  = 'http://192.168.0.31:8069/things/gates/incoming/'
-routeFrom  ='20200411144131b730022b6f9047a38726912b1b48b1cc'
+
+url_basis  = 'http://192.168.0.31:8069/things/data/incoming/'
+routeFrom  ='20200411144735fcd49703522a44549b157ca0a89944f1'
 
 url = url_basis + routeFrom
 
@@ -16,7 +20,8 @@ headers = {'content-type': 'application/json'}
 r = requests.post(url,
     data=json.dumps(payload),
     headers=headers,
-    timeout=1)
+    #timeout=5
+    )
 
 gateData = json.loads(r.text)
 
